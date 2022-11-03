@@ -1,0 +1,25 @@
+{% extends 'menu/base.html' %}
+
+{% block content%}
+<h1>{{title}}</h1>
+<p>Содержимое главной страницы</p>
+    <div class="content">
+        {% for category in categories %}
+        <div class="content">
+            {{category.title}}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="content">
+        {% for dish in dishes %}
+        <div class="dish_card">
+            <h3>{{dish.title}}</h3>
+            <p>{{dish.ingredients}}</p>
+            <p>{{dish.category}}</p>
+            <p>{{dish.image}}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock content%}
